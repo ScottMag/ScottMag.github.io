@@ -66,20 +66,54 @@ textarea {
     font: inherit;
 }
 
-
-
-
-
 /*------------------------------------*\
     $MAIN
 \*------------------------------------*/
 html {
-    background-color: #ecf0f1;
-    color: #7f8c8d;
-    font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*background-color: #ecf0f1;*/
+    /*color: #7f8c8d;*/
+    /*font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 }
+
 body {
+    padding: 25px;
     margin: 10%;
+    background-color: #ecf0f1;
+    color: black;
+    font-size: 25px;
+    font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background-color: #ecf0f1;
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ecf0f1;
+}
+
+.dark-mode-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: transparent;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode .dark-mode-btn {
+  color: #000000;
+}
+
+body.dark-mode .dark-mode-btn {
+  color: #ffffff;
 }
 
 .avatar {
@@ -141,10 +175,6 @@ body {
                 width: 20px;
                 height: 9px;
             }
-
-
-
-
 
 /*------------------------------------*\
     $TYPOGRAPHY
